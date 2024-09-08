@@ -1,21 +1,15 @@
-# Biblioteca de RPG
+# Biblioteca de Livros de RPG de Mesa
 
-Este repositório contém uma coleção de livros de RPG em formato PDF. Você pode visualizar as capas dos livros e clicar nelas para acessar os arquivos diretamente.
+Aqui você encontrará uma coleção de livros de RPG organizados por tema.
 
-## Pesquisar Livros
+## Livros de Regras
+- [Livro de Regras 1](./Livros/livro_de_regras_1.pdf)
+- [Livro de Regras 2](./Livros/livro_de_regras_2.pdf)
 
-Para facilitar a navegação pelos livros, criamos uma página de pesquisa interativa. Você pode acessar essa página clicando no link abaixo:
+## Aventuras
+- [Aventura Épica](./Aventuras/aventura_epica.pdf)
+- [Aventura Sombria](./Aventuras/aventura_sombria.pdf)
 
-[**Acesse a Biblioteca de RPG com Pesquisa**](caminho/para/sua/pagina/index.html)
-
-## Lista de Livros
-
-Aqui está uma lista dos livros disponíveis no repositório:
-
-- [Livro 1](livros/livro1/livro1.pdf)
-- [Livro 2](livros/livro2/livro2.pdf)
-
-## Como Navegar
-
-- Clique nas capas dos livros para abri-los.
-- Use o campo de busca na página de pesquisa para encontrar livros pelo título.
+## Suplementos
+- [Suplemento de Magia](./Suplementos/suplemento_de_magia.pdf)
+- [Suplemento de Criaturas](./Suplementos/suplemento_de_criaturas.pdf)
