@@ -1,31 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca de RPG</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
         .livro {
             margin-bottom: 20px;
         }
         .capa {
             max-width: 200px;
+            display: block;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
-    <h1>Biblioteca de RPG</h1>
-    <div class="livros">
-        <div class="livro">
-            <a href="livros/livro1/livro1.pdf">
-                <img src="livros/livro1/capa_livro1.jpg" class="capa" alt="Capa Livro 1">
-            </a>
-            <p>Livro 1</p>
-        </div>
-        <div class="livro">
-            <a href="livros/livro2/livro2.pdf">
-                <img src="livros/livro2/capa_livro2.jpg" class="capa" alt="Capa Livro 2">
-            </a>
-            <p>Livro 2</p>
-        </div>
+
+<h1>Biblioteca de RPG</h1>
+
+<!-- Campo de Pesquisa -->
+<input type="text" id="searchInput" class="search-bar" placeholder="Pesquisar livros..." onkeyup="searchBooks()">
+
+<!-- Contêiner de Livros -->
+<div class="livros" id="livrosContainer">
+    <div class="livro" data-title="Livro 1">
+        <a href="livros/livro1/livro1.pdf">
+            <img src="livros/livro1/capa_livro1.jpg" class="capa" alt="Capa Livro 1">
+        </a>
+        <p>Livro 1</p>
     </div>
+    <div class="livro" data-title="Livro 2">
+        <a href="livros/livro2/livro2.pdf">
+            <img src="livros/livro2/capa_livro2.jpg" class="capa" alt="Capa Livro 2">
+        </a>
+        <p>Livro 2</p>
+    </div>
+</div>
+
+<!-- Script para Pesquisar Livros -->
+<script>
+    function searchBooks() {
+        var input, filter, container, livros, title, i;
+        input = document.getElementById('searchInput');
+        filter = input.value.toUpperCase();
+        container = document.getElementById("livrosContainer");
+        livros = container.getElementsByClassName('livro');
+
+        for (i = 0; i < livros.length; i++) {
+            title = livros[i].getAttribute('data-title');
+            if (title.toUpperCase().indexOf(filter) > -1) {
+                livros[i].style.display = "";
+            } else {
+                livros[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
 </body>
 </html>
